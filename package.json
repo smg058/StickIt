@@ -1,0 +1,35 @@
+{
+  "name": "stick-it",
+  "version": "1.0.0",
+  "description": "A simple JS module to apply sticky header behavior.",
+  "license": "MIT",
+  "author": {
+    "email": "dev@chayson.com",
+    "url": "https://chayson.com",
+    "name": "Chayson Media Group",
+    "twitter": "https://x.com/chaysonmg"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smg058/StickIt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/smg058/StickIt/issues"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "lint": "eslint src --fix",
+    "build": "npm run clean && npm run lint && rollup -c",
+    "watch": "rollup -c -w",
+    "bump:patch": "npm version patch",
+    "bump:minor": "npm version minor",
+    "bump:major": "npm version major"
+  },
+  "devDependencies": {
+    "@rollup/plugin-eslint": "^9.0.5",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rimraf": "^6.0.1",
+    "rollup": "^4.28.1"
+  },
+  "dependencies": {}
+}
