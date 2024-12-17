@@ -1,7 +1,13 @@
 {
-  "name": "stick-it",
+  "name": "@chayson/stick-it",
   "version": "1.0.0",
   "description": "A simple JS module to apply sticky header behavior.",
+  "main": "dist/sticky-it.min.js",
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
   "license": "MIT",
   "author": {
     "email": "dev@chayson.com",
@@ -25,6 +31,7 @@
     "bump:minor": "npm version minor",
     "bump:major": "npm version major"
   },
+  "keywords": ["sticky", "header", "plugin", "javascript", "stick-it", "headhesive"],
   "devDependencies": {
     "@rollup/plugin-eslint": "^9.0.5",
     "@rollup/plugin-terser": "^0.4.4",
