@@ -37,7 +37,7 @@ StickIt supports configurable offsets, numeric or element-based triggers, and in
 You can install StickIt via NPM:
 
 ```bash
-npm install stick-it-plugin
+npm install @chayson/stick-it
 ```
 
 Alternatively, include the pre-built UMD version via a `<script>` tag:
