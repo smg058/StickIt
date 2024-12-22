@@ -1,6 +1,6 @@
 {
   "name": "@chayson/stick-it",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A simple JS module to apply sticky header behavior.",
   "main": "dist/sticky-it.min.js",
   "files": [
@@ -24,7 +24,7 @@
   },
   "scripts": {
     "clean": "rimraf dist",
-    "lint": "eslint src --fix",
+    "lint": "eslint --cache --cache-location .cache/.eslintcache src --fix",
     "build": "npm run clean && npm run lint && rollup -c",
     "watch": "rollup -c -w",
     "bump:patch": "npm version patch",

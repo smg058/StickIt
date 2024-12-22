@@ -29,7 +29,7 @@ import { throttle, getScrollY, getElementYPosition } from './helpers.js'
  *
  * This project is a custom modernized version of headhesive.js by Mark Goodyear.
  *
- * @version 1.0.0
+ * @version 1.1.0
  * @author Chayson Media Group
  * @license MIT
  *
@@ -94,9 +94,15 @@ export default class StickIt {
    * - Calls the onInit callback.
    */
   init() {
-    // Clone the element and add the clone class.
+    // Clone the element and add the clone class(es).
     this.clonedElem = this.elem.cloneNode(true)
-    this.clonedElem.classList.add(this.options.classes.clone)
+
+    const cloneClasses = Array.isArray(this.options.classes.clone)
+      ? this.options.classes.clone
+      : [this.options.classes.clone]
+
+    cloneClasses.forEach(cls => this.clonedElem.classList.add(cls))
+
     document.body.insertBefore(this.clonedElem, document.body.firstChild)
 
     // Determine the initial scroll offset.
@@ -110,7 +116,7 @@ export default class StickIt {
     window.addEventListener('scroll', this._throttledUpdate, false)
     window.addEventListener('resize', this._throttledScrollOffset, false)
 
-    // Call the initialization callback.
+    // Call the init callback.
     this.options.onInit.call(this)
   }
 

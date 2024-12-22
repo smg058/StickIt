@@ -6,7 +6,7 @@ const pkg = JSON.parse(fs.readFileSync('./package.json', 'utf-8'))
 
 const banner = `
   /*!
-   * Stick it v{$pkg.version} - ${pkg.description}
+   * Stick it v${pkg.version} - ${pkg.description}
    * Author: ${pkg.author.name} <${pkg.author.email}> <${pkg.author.url}>
    * URL: ${pkg.homepage}
    * License: ${pkg.license}
