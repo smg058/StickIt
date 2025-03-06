@@ -29,7 +29,7 @@ import { throttle, getScrollY, getElementYPosition } from './helpers.js'
  *
  * This project is a custom modernized version of headhesive.js by Mark Goodyear.
  *
- * @version 1.1.0
+ * @version 2.0.0
  * @author Chayson Media Group
  * @license MIT
  *

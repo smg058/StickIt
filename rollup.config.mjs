@@ -44,5 +44,21 @@ export default [
         mangle: true
       })
     ]
+  },
+  {
+    input: 'src/stick-it.js',
+    output: {
+      file: 'dist/stick-it.esm.js',
+      format: 'es'
+    },
+    plugins: [
+      eslint(),
+      terser({
+        compress: {
+          passes: 2
+        },
+        mangle: true
+      })
+    ]
   }
 ]
